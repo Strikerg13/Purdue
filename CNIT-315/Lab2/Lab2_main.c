@@ -6,7 +6,7 @@ Email: astalke@purdue.edu
 Course: CNIT 315
 Lab Section: 7 (1:30 - 3:20)
 Due Date: 11 February 2015
-----------------------
+-----------------------
 */
 #include <stdio.h>
 #include "Lab2.h"

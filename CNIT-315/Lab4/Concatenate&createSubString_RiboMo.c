@@ -6,6 +6,7 @@ char* concatenate(char* string1, char* string2){
 	int length1 = 0;
 	int length2 = 0;
 	int i = 0;
+	char* charPointer;
 
 	//Find the length of the string
 	while(1){
@@ -22,7 +23,6 @@ char* concatenate(char* string1, char* string2){
 		length2 ++;
 	}
 
-	char* charPointer;
 	charPointer = malloc((length1 + length2) * sizeof(char));
 	
 	//Put them together
@@ -42,6 +42,7 @@ char* concatenate(char* string1, char* string2){
 int checkConcatenate(char* string1,char* string2,char* concatenatedString){
 	char *text;
 	text = concatenate(string1,string2);
+	
 	if(strcmp(text,concatenatedString) == 0){
 		return 0;
 	}
@@ -52,6 +53,7 @@ int checkConcatenate(char* string1,char* string2,char* concatenatedString){
 
 //Create a substring from text[start] to text[end]
 char* createSubString(char* text,int start,int end){
+	//Validation
 	if(start > end){
 		printf("Error! start is bigger than end\n");
 		char* value = "";
@@ -70,10 +72,11 @@ char* createSubString(char* text,int start,int end){
 		return value;
 	}
 
+	//init
 	char* returnString;
 	int i = 0;
+
 	returnString  = malloc((end - start + 1) * sizeof(char));
-	
 	for(i = start;i<=end;i++){
 		returnString[i - start] = text[i];
 	}
@@ -83,6 +86,7 @@ char* createSubString(char* text,int start,int end){
 //0 pass;
 int checkCreateSubString(char* text,int start,int end,char* testString){
 	char* string;
+	
 	string = createSubString(text,start,end);
 	if(strcmp(string,testString) == 0){
 		return 0;

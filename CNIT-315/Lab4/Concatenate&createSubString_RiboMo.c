@@ -93,7 +93,8 @@ int checkCreateSubString(char* text,int start,int end,char* testString){
 }
 
 int main(){
-	/*
+
+	//Test for Concatenate two string
 	char string1[100];
 	char string2[100];
 	scanf("%s",string1);
@@ -103,11 +104,11 @@ int main(){
 	printf("%s\n",text);
 	int check = checkConcatenate(string1,string2,"text");
 	printf("%d\n",check);
-	return 1;
-	*/
 
+	//Test for create sub string
 	char string[100];
 	scanf("%s",string);
 	printf("%s\n",createSubString(string,1,3));
 
+	return 1;
 }
